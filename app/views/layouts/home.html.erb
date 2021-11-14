@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %> | AdminBASE Rails 6</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body class="hold-transition login-page">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="/">
+          <%= image_pack_tag "media/images/logo-admin-icon.svg", class: 'img-md', alt: 'Admin Logo' %>
+          <span class="logo-text">Admin<strong>BASE</strong></span>
+        </a>
+      </div>
+      <!-- /.login-logo -->
+      <div class="card">
+        <div class="card-body login-card-body">
+          <%= yield %>
+        </div>
+        <!-- /.login-card-body -->
+      </div>
+        
+    </div>
+            
+    
+    <%= render "layouts/partials/toast" %>
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+en:
+  users:
+    sessions:
+      new: 
+        title: "Login"
+    registrations:
+      new: 
+        title: "Register"
+    passwords:
+      new: 
+        title: "Forgot Password"    
+    confirmations:
+      new: 
+        title: "Resend Confirmation Instructions"
+    unlocks:
+      new: 
+        title: "Resend Unlock Instructions"
+  admin:
+    dashboard:
+      index:
+        title: "Dashboard"
+      styles:
+        title: "Admin Styles"
+    users:
+      index:
+        title: "Users"
+      new:
+        title: "New User"
+      create:
+        title: "New User"
+      show:
+        title: "View User %{name}"
+      edit:
+        title: "Edit User %{name}"
+      update:
+        title: "Edit User %{name}"
+    roles:
+      index:
+        title: "Roles"
+      new:
+        title: "New Role"
+      create:
+        title: "New Role"
+      show:
+        title: "View Role %{name}"
+      edit:
+        title: "Edit Role %{name}"
+      update:
+        title: "Edit Role %{name}"
+      

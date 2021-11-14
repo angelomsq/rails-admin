@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: "sh ./start.sh"
+    volumes:
+      - ./:/app
+      # - ./start.sh:/app/start.sh
+      # - ~/.ssh:/root/.ssh
+      - bundle:/usr/local/bundle
+    ports:
+      - "3000"
+    external_links:
+      - postgres_srv
+      # - mysql_srv
+    environment:
+      VIRTUAL_HOST: rails-admin.localhost
+volumes:
+  bundle:
+networks:
+  default:
+    external:
+      name: server_default
+

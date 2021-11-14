@@ -1,0 +1,35 @@
+<p class="login-box-msg">Sign in to start your session</p>
+<%= simple_form_for resource, as: resource_name, url: session_path(resource_name), wrapper: :input_group do |f| %>
+
+  <%#= f.input :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email",
+  label: false, append: "<span class='fas fa-envelope'></span>".html_safe %>  
+  <%= f.input :login, class: "form-control", placeholder: "Username or Email", autofocus: true, autocomplete: "usernameOrEmail",
+  label: false, append: "<span class='fas fa-user'></span>".html_safe %>  
+
+  <%= f.input :password, class: "form-control", placeholder: "Password", autocomplete: "current-password",
+    label: false, append: "<span class='fas fa-lock'></span>".html_safe %>
+    
+  <%#= f.input :remember_me, inline_label: 'Remember me', wrapper: :icheck_boolean, icheck_wrapper_html: { class: "icheck-primary" }, as: :boolean, input_html: { class: 'icheck-danger', include_hidden: true } %>
+  
+
+  <div class="row mb-3">
+    <% if devise_mapping.rememberable? %>
+      <div class="col-8">
+        <div class="icheck-primary">
+          <%= f.input_field :remember_me, as: :boolean %> 
+          <%= f.label :remember_me %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="col-4">
+      <%# <button type="submit" class="btn btn-primary btn-block">Sign In</button> %>
+      <%= f.submit "Log in", class: "btn btn-primary btn-block" %>
+    </div>
+  </div>
+
+<% end %>
+<div class="social-auth-links text-center">
+  <p>- OR -</p>
+</div>
+<%= render "users/shared/links" %>

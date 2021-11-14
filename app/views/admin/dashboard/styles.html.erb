@@ -1,0 +1,260 @@
+<h3>iCheck Bootstrap</h3>
+<div class="row">
+  <div class="form-group col-4">
+    <div class="icheck-default">
+      <input type="checkbox" id="someCheckboxId0" />
+      <label for="someCheckboxId0">Click to check</label>
+    </div>
+    <div class="icheck-primary">
+      <input type="checkbox" id="someCheckboxId1" />
+      <label for="someCheckboxId1">Click to check</label>
+    </div>
+    <div class="icheck-info">
+      <input type="checkbox" id="someCheckboxId2" />
+      <label for="someCheckboxId2">Click to check</label>
+    </div>
+    <div class="icheck-success">
+      <input type="checkbox" id="someCheckboxId3" />
+      <label for="someCheckboxId3">Click to check</label>
+    </div>
+    <div class="icheck-danger">
+      <input type="checkbox" id="someCheckboxId4" />
+      <label for="someCheckboxId4">Click to check</label>
+    </div>
+    <div class="icheck-warning">
+      <input type="checkbox" id="someCheckboxId5" />
+      <label for="someCheckboxId5">Click to check</label>
+    </div>
+  </div>
+
+  <div class="form-group col-md-3 col-sm-6">
+    <label for="sexo">Sexo*</label>
+    <div class="icheck-primary icheck-inline">
+        <input type='radio' name='sexo' id='sexo[0]' value='M'> 
+        <label for="sexo[0]">Masculino</label>
+    </div>
+    <div class="icheck-primary icheck-inline">
+        <input type='radio' name='sexo' id='sexo[1]' value='F'>
+        <label for="sexo[1]">Feminino</label>
+    </div>
+  </div>
+  <div class="form-group col-4">
+    <div class="icheck-primary icheck-inline">
+      <input type="checkbox" id="chb1" />
+      <label for="chb1">Label 1</label>
+    </div>
+    <div class="icheck-primary icheck-inline">
+      <input type="checkbox" id="chb2" />
+      <label for="chb2">Label 2</label>
+    </div>
+  </div>
+</div>
+
+<h3>Inputmask</h3>
+
+<div class="row">
+  <div class="form-group col-sm-3">
+    <label for="cpf">CPF*</label>
+    <input type='text' name='cpf' id="cpf" class="form-control cpf" autocomplete="nope">
+  </div>
+  <div class="form-group col-sm-3">
+    <label for="cnpj">CNPJ*</label>
+    <input type='text' name='cnpj' id="cnpj" class="form-control cnpj" autocomplete="nope">
+  </div>
+  <div class="form-group col-sm-3">
+    <label for="phone">TELEFONE*</label>
+    <input type='text' name='phone' id="phone" class="form-control phone" autocomplete="nope">
+  </div>
+  <div class="form-group col-sm-3">
+    <label for="cep">CEP*</label>
+    <input type='text' name='cep' id="cep" class="form-control cep" autocomplete="nope">
+  </div>
+</div>
+
+<h3>DateTime Picker</h3>
+
+<div class="row">
+  <div class="form-group col-md-3 col-sm-6">
+    <label for="nascimento">Data de Nascimento:</label>
+    <input type="text" class="form-control datetimepicker-input date" name="nasc" id="nasc" data-toggle="datetimepicker" data-target="#nasc" autocomplete="nope">
+  </div>
+  <div class="form-group col-md-3 col-sm-6">
+    <label for="nascimento">Data de Prova:</label>
+    <input type="text" class="form-control datetimepicker-input datetime" name="prova" id="prova" data-toggle="datetimepicker" data-target="#prova" autocomplete="nope">
+  </div>
+</div>
+
+<h3>Select2</h3>
+
+<div class="row">
+  <div class="form-group col-md-3 col-sm-6">
+    <label for="nome">UF:</label>
+    <select class="form-control select2bs4" id="rguf" name="rguf">
+      <option value="AC">AC</option>
+      <option value="AL">AL</option>
+      <option value="AM">AM</option>
+      <option value="AP">AP</option>
+      <option value="BA">BA</option>
+      <option value="CE" selected="selected">CE</option>
+      <option value="DF">DF</option>
+      <option value="ES">ES</option>
+      <option value="GO">GO</option>
+      <option value="MA">MA</option>
+      <option value="MG">MG</option>
+      <option value="MS">MS</option>
+      <option value="MT">MT</option>
+      <option value="PA">PA</option>
+      <option value="PB">PB</option>
+      <option value="PE">PE</option>
+      <option value="PI">PI</option>
+      <option value="PR">PR</option>
+      <option value="RJ">RJ</option>
+      <option value="RN">RN</option>
+      <option value="RO">RO</option>
+      <option value="RR">RR</option>
+      <option value="RS">RS</option>
+      <option value="SC">SC</option>
+      <option value="SE">SE</option>
+      <option value="SP">SP</option>
+      <option value="TO">TO</option>
+    </select>
+  </div>
+</div>
+
+<h3>BS Stepper</h3>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">bs-stepper</h3>
+      </div>
+      <div class="card-body p-0">
+        <div class="bs-stepper">
+          <div class="bs-stepper-header" role="tablist">
+            <!-- your steps here -->
+            <div class="step" data-target="#logins-part">
+              <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
+                <span class="bs-stepper-circle">1</span>
+                <span class="bs-stepper-label">Logins</span>
+              </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#information-part">
+              <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                <span class="bs-stepper-circle">2</span>
+                <span class="bs-stepper-label">Various information</span>
+              </button>
+            </div>
+          </div>
+          <div class="bs-stepper-content">
+            <!-- your steps content here -->
+            <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+            </div>
+            <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+              <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">Upload</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        Visit <a href="https://github.com/Johann-S/bs-stepper/#how-to-use-it">bs-stepper documentation</a> for more examples and information about the plugin.
+      </div>
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
+
+<!-- Bootstrap Switch -->
+<div class="card card-secondary">
+  <div class="card-header">
+    <h3 class="card-title">Bootstrap Switch</h3>
+  </div>
+  <div class="card-body">
+    <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-on-text="SIM" data-off-text="NÃO">
+    <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success" data-on-text="LIGADO" data-off-text="DESLIGADO">
+    <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
+  </div>
+</div>
+<!-- /.card -->
+
+<div class="card card-secondary">
+  <div class="card-header">
+    <h3 class="card-title">Dropzone File Upload</h3>
+  </div>
+  <div class="card-body">
+    <form action="/file-upload" class="dropzone">
+      <div class="fallback">
+        <input name="file" type="file" multiple />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card card-secondary">
+  <div class="card-header">
+    <h3 class="card-title">Summernote WYSIWYG Editor</h3>
+  </div>
+  <div class="card-body">
+    <textarea name="editor" id="editor" class="summernote" rows="5">
+    Summernote WYSIWYG Editor
+    </textarea>
+  </div>
+</div>
+
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">Quick Example <small>jQuery Validation</small></h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form id="loginForm">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="exampleInputCPF1">CPF</label>
+        <input type="text" name="cpf" class="form-control cpf" id="exampleInputCPF1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group mb-0">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
+          <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
+        </div>
+      </div>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>

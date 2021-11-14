@@ -1,0 +1,19 @@
+<p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
+
+<%= simple_form_for resource, as: resource_name, url: password_path(resource_name), wrapper: :input_group, html: { method: :post } do |f| %>
+  <%#= render "users/shared/error_messages", resource: resource %>
+
+  <%= f.input :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email",
+    label: false, append: "<span class='fas fa-envelope'></span>".html_safe %>  
+
+  <div class="row">
+    <div class="col-12">
+      <%= f.submit "Request new password", class: "btn btn-primary btn-block" %>
+    </div>
+    <!-- /.col -->
+  </div>
+<% end %>
+<div class="social-auth-links text-center">
+  <p>- OR -</p>
+</div>
+<%= render "users/shared/links" %>

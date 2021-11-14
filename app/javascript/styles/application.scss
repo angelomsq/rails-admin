@@ -1,0 +1,85 @@
+/**
+ * Import CSS Packages
+ */
+@import "bootstrap";
+@import "admin-lte";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import "@fortawesome/fontawesome-free";
+// @import "icheck-bootstrap";
+@import "select2";
+@import "@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.css";
+@import "tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4";
+@import "bs-stepper/dist/css/bs-stepper";
+@import "summernote/dist/summernote-bs4";
+@import "toastr";
+
+@import "./icheck-simpleform.scss";
+
+
+.login-page {
+  background: url('../images/bg-desk.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgb(255 255 255 / 90%);
+}
+
+.login-logo {
+  padding: 10px 30px;
+
+  a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-text {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -1.5px;
+    color: #0051bb;
+
+    strong {
+      font-weight: 700;
+      color: #003377;
+    }
+  }
+
+}
+
+
+.main-sidebar {
+  
+  .brand-link {
+    display: flex;
+    align-items: center;
+    
+    .brand-text {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -1.5px;
+  
+      strong {
+        font-weight: 700;
+      }
+  
+    }
+  }
+  
+}
+
+.user-menu {
+
+  &:hover {
+    background: #ccc;
+  }
+
+  > a {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+

@@ -1,0 +1,11 @@
+
+<%= simple_form_for [:admin,@role], wrapper: :input_group do |f| %>
+  <div class="card-body">
+    <%= f.input :name, class: "form-control" %>
+    <%= f.input :description %>
+
+    <%= link_to 'Back', admin_roles_path, class: "btn btn-secondary" %>
+    <%= f.button :submit, class: "btn btn-success float-right" %>
+  </div>
+  
+<% end %>
