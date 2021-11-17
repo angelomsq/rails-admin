@@ -6,7 +6,8 @@ services:
     volumes:
       - ./:/app
       # - ./start.sh:/app/start.sh
-      # - ~/.ssh:/root/.ssh
+      - ~/.ssh:/root/.ssh
+      # - ~/.ssh/id_rsa:/home/user/.ssh/id_rsa
       - bundle:/usr/local/bundle
     ports:
       - "3000"
