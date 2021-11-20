@@ -12,7 +12,7 @@
 
   </head>
 
-  <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini">
+  <body data-scrollbar-auto-hide="n" class="hold-transition layout-top-nav sidebar-collapse">
     <div class="wrapper">
       <%= render "layouts/partials/header" %>
       <%= render "layouts/partials/sidebar" %>
@@ -20,7 +20,7 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
-          <div class="container-fluid">
+          <div class="container">
             <div class="row mb-2">
               <div class="col-sm-6">
                 <h1 class="m-0"><%= title(@resource_name) %></h1>
@@ -41,8 +41,10 @@
 
         <!-- Main content -->
         <div class="content">
-          <div class="container-fluid">
-            <%= yield %>
+          <div class="container">
+            <div class="row">
+              <%= yield %>
+            </div>
           </div>
         </div>
       </div>
