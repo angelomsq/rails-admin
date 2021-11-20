@@ -36,7 +36,7 @@ set :keep_releases, 3
 set :keep_assets, 3
 
 ## Linked Files & Directories (Default None):
-set :linked_files, %w{config/database.yml config/master.key}
+set :linked_files, %w{.env config/database.yml config/master.key}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
