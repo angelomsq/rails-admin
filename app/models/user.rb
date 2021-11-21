@@ -36,15 +36,15 @@ class User < ApplicationRecord
     nil
   end
 
-  Role.all.each do |role|
-    define_method "is_#{role.name.downcase}?" do
-      # self.role.id == "#{role.id}"
-      self.role.id == role.id
-    end
-  end
-  # def is_admin?
-  #   self.role.name == "Administrator"
+  # Role.all.each do |role|
+  #   define_method "is_#{role.name.downcase}?" do
+  #     # self.role.id == "#{role.id}"
+  #     self.role.id == role.id
+  #   end
   # end
+  def is_admin?
+    self.role.name == "Administrator"
+  end
 
   private
 

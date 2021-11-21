@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     root 'dashboard#index'
     get 'styles', to: 'dashboard#styles', as: 'styles'
     resources :users
-    # resources :roles
+    resources :roles
   end
   root 'home#index'
   
