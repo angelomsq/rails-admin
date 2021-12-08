@@ -1,0 +1,90 @@
+pt-BR:
+  activerecord:
+    attributes:
+      role:
+        name: "Nome"
+        description: "Descrição"
+      models:
+        role: "Níveis"
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+  users:
+    sessions:
+      new: 
+        title: "Login"
+    registrations:
+      new: 
+        title: "Cadastro"
+    passwords:
+      new: 
+        title: "Esqueci Minha Senha"    
+    confirmations:
+      new: 
+        title: "Reenvio das Instruções de Confirmação de Usuário"
+    unlocks:
+      new: 
+        title: "Reenvio das Instruções de Desbloqueio de Usuário"
+  admin:
+    dashboard:
+      index:
+        title: "Dashboard"
+      styles:
+        title: "Admin Styles"
+    users:
+      index:
+        title: "Usuários"
+        subtitle: "Lista de Usuários"
+      new:
+        title: "Novo Usuário"
+        subtitle: "Adicionar Usuário"
+      create:
+        title: "Novo Usuário"
+      show:
+        title: "Usuário %{name}"
+      edit:
+        title: "Editar Usuário %{name}"
+      update:
+        title: "Editar Usuário %{name}"
+    roles:
+      index:
+        title: "Níveis de Permissões"
+      new:
+        title: "Novo Nível"
+      create:
+        title: "Novo Nível"
+      show:
+        title: "Nível %{name}"
+      edit:
+        title: "Editar Nível %{name}"
+      update:
+        title: "Editar Nível %{name}"
+    research_areas:
+      index:
+        title: "Área de Pesquisa"
+      new:
+        title: "Nova Área"
+      create:
+        title: "Nova Área"
+      show:
+        title: "Área %{name}"
+      edit:
+        title: "Editar Área %{name}"
+      update:
+        title: "Editar Área %{name}"
+    research_lines:
+      index:
+        title: "Linha de Pesquisa"
+      new:
+        title: "Novo Linha de Pesquisa"
+      create:
+        title: "Novo Linha de Pesquisa"
+      show:
+        title: "Linha de Pesquisa %{name}"
+      edit:
+        title: "Editar Linha de Pesquisa %{name}"
+      update:
+        title: "Editar Linha de Pesquisa %{name}"
+      

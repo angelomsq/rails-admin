@@ -4,6 +4,11 @@
     <%= f.input :name, class: "form-control" %>
     <%= f.input :description %>
 
+    <%= f.input :permissions, 
+      collection: RolePermissions.to_a, 
+      wrapper: :icheck_collection, 
+      as: :check_boxes %>
+
     <%= link_to 'Back', admin_roles_path, class: "btn btn-secondary" %>
     <%= f.button :submit, class: "btn btn-success float-right" %>
   </div>

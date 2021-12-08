@@ -7,7 +7,16 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :timeoutable, :trackable
 
-  belongs_to :role
+  has_many :user_roles
+  has_many :roles, through: :user_roles
+
+  def has_role?(role)
+    roles.where({ key: role }.compact).exists?
+  end
+
+  def get_roles 
+    self.roles.pluck(:name).join(", ")
+  end
 
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
   validates :username, uniqueness: true, presence: true
@@ -42,9 +51,9 @@ class User < ApplicationRecord
   #     self.role.id == role.id
   #   end
   # end
-  def is_admin?
-    self.role.name == "Administrator"
-  end
+  # def is_admin?
+  #   self.role.name == "Administrator"
+  # end
 
   private
 

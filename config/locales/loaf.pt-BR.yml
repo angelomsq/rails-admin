@@ -1,0 +1,6 @@
+en:
+  loaf:
+    errors:
+      invalid_options: "Opção Inválida :%{invalid}. Opções validas são: %{valid}, tenha certeza de estar usando uma dessas opções."
+    breadcrumbs:
+      home: 'Home'

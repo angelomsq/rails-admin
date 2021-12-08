@@ -6,7 +6,7 @@ class Admin::UsersController < Admin::DashboardController
 
   # GET /admin/users
   def index
-    @users = User.all
+    @users = User.all.order(id: :asc)
   end
 
   # GET /admin/users/1
@@ -64,7 +64,7 @@ class Admin::UsersController < Admin::DashboardController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username, :email, :password, :password_confirmation, :role_id)
+      params.require(:user).permit(:username, :email, :password, :password_confirmation, role_ids: [])
     end
 
     def main_breadcrumb

@@ -1,0 +1,13 @@
+en:
+  enumerations:
+    role_permissions:
+      manage__user: "Manage User"
+      read__user: "Read User" 
+      create__user: "Create User"
+      update__user: "Update User" 
+      destroy__user: "Delete User"
+      manage__role: "Manage Role"
+      read__role: "Read Role" 
+      create__role: "Create Role" 
+      update__role: "Update Role" 
+      destroy__role: "Delete Role"

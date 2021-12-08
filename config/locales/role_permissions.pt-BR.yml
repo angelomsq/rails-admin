@@ -1,0 +1,13 @@
+pt-BR:
+  enumerations:
+    role_permissions:
+      manage__user: "Gerenciar Usuário"
+      read__user: "Ver Usuário" 
+      create__user: "Criar Usuário"
+      update__user: "Atualizar Usuário" 
+      destroy__user: "Remover Usuário"
+      manage__role: "Gerenciar Nível de Permissão"
+      read__role: "Ver Nível de Permissão" 
+      create__role: "Criar Nível de Permissão" 
+      update__role: "Atualizar Nível de Permissão" 
+      destroy__role: "Remover Nível de Permissão"

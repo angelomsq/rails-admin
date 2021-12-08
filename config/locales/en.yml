@@ -1,4 +1,14 @@
 en:
+  activerecord:
+    attributes:
+      role:
+        name: "Name"
+        description: "Description"
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " and "
+      last_word_connector: " and "
   users:
     sessions:
       new: 
@@ -24,12 +34,15 @@ en:
     users:
       index:
         title: "Users"
+        subtitle: "Users List"
       new:
         title: "New User"
+        subtitle: "Add User"
       create:
         title: "New User"
       show:
         title: "View User %{name}"
+        title: "User Data"
       edit:
         title: "Edit User %{name}"
       update:
@@ -47,4 +60,30 @@ en:
         title: "Edit Role %{name}"
       update:
         title: "Edit Role %{name}"
+    research_areas:
+      index:
+        title: "Research Areas"
+      new:
+        title: "New Research Area"
+      create:
+        title: "New Research Area"
+      show:
+        title: "View Research Area %{name}"
+      edit:
+        title: "Edit Research Area %{name}"
+      update:
+        title: "Edit Research Area %{name}"
+    research_lines:
+      index:
+        title: "Research Lines"
+      new:
+        title: "New Research Line"
+      create:
+        title: "New Research Line"
+      show:
+        title: "View Research Line %{name}"
+      edit:
+        title: "Edit Research Line %{name}"
+      update:
+        title: "Edit Research Line %{name}"
       

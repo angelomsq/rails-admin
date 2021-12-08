@@ -7,9 +7,15 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
     user ||= User.new # guest user (not logged in)
-    if user.is_admin?
+    if user.has_role? :admin
       can :manage, :all
     else
+      user.roles.each do |role|
+        role.permissions.each do |perm|
+          level, entity = perm.split('__')
+          can level.to_sym, entity.camelize.constantize
+        end
+      end
       can :read, :all
     end
     #

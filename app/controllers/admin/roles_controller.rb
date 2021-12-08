@@ -6,7 +6,7 @@ class Admin::RolesController < Admin::DashboardController
 
   # GET /roles or /roles.json
   def index
-    @roles = Role.all
+    @roles = Role.all.order(id: :asc)
   end
 
   # GET /roles/1 or /roles/1.json
@@ -61,7 +61,7 @@ class Admin::RolesController < Admin::DashboardController
 
     # Only allow a list of trusted parameters through.
     def role_params
-      params.require(:role).permit(:name, :description)
+      params.require(:role).permit(:name, :description, permissions: [])
     end
 
     def main_breadcrumb

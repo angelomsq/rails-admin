@@ -13,6 +13,11 @@
         <strong>Description:</strong>
         <%= @role.description %>
       </p>
+
+      <p>
+        <strong>Permissions:</strong>
+        <%= @role.get_permissions %>
+      </p>
       <%= link_to 'Back', admin_roles_path, class: "btn btn-secondary" %>
       <%= link_to 'Edit Role', edit_admin_role_path(@role), class: "btn btn-success float-right" %>
     </div>

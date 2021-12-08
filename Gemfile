@@ -35,6 +35,7 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'cancancan'
+gem 'enumerate_it'
 
 #loaf breadcrumbs
 gem 'loaf'
