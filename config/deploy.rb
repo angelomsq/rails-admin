@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 # Change these
-server '34.222.119.141', port: 22, roles: [:web, :app, :db], primary: true
+server '35.166.192.82', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:angelomsq/rails-admin.git'
 set :application,     'rails-admin'
@@ -26,10 +26,12 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+set :puma_restart_command, "pumactl -P /home/#{fetch(:user)}/#{fetch(:application)}/current/tmp/pids/puma.pid phased-restart"
 
 # Rbenv specific settings
 set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_ruby, File.read('.ruby-version').strip
+set :rbenv_ruby, '2.6.5'
+# set :rbenv_ruby, File.read('.ruby-version').strip
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 
 ## Defaults:
@@ -89,6 +91,7 @@ namespace :deploy do
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
+  after 'deploy:publishing', 'deploy:restart'
   # after  :finishing,    :restart
 
   before "deploy:assets:precompile", "deploy:yarn_install"
