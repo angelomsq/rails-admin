@@ -14,6 +14,8 @@ require 'capistrano/puma'
 install_plugin Capistrano::Puma
 install_plugin Capistrano::Puma::Systemd
 
+require 'sshkit/sudo'
+
 # Depending on your server, you may need a different plugin
 # For a Digital Ocean deploy, 'Daemon' will work
 # Documentation: https://github.com/seuros/capistrano-puma
