@@ -12,11 +12,12 @@ install_plugin Capistrano::SCM::Git
 
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Systemd
 
 # Depending on your server, you may need a different plugin
 # For a Digital Ocean deploy, 'Daemon' will work
 # Documentation: https://github.com/seuros/capistrano-puma
 # From the documentation: "If you using puma daemonized (not supported in Puma 5+)""
-install_plugin Capistrano::Puma::Daemon
+# install_plugin Capistrano::Puma::Daemon
 
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }

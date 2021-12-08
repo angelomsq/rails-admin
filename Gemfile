@@ -54,6 +54,7 @@ group :development do
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma', require: false
   gem 'capistrano-db-tasks', require: false
+  gem 'sshkit-sudo', require: false
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.

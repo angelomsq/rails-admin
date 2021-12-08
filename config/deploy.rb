@@ -48,6 +48,12 @@ namespace :puma do
     end
   end
 
+  task :start do
+    on roles(:app) do
+      invoke! 'puma:restart'
+    end
+  end
+
   before 'deploy:starting', 'puma:make_dirs'
 end
 
@@ -74,10 +80,10 @@ namespace :deploy do
   end
 
   desc 'Restart application'
-    task :restart do
-      on roles(:app), in: :sequence, wait: 5 do
-        invoke 'puma:restart'
-      end
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      invoke 'puma:restart'
+    end
   end
 
   before :starting,     :check_revision
