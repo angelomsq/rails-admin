@@ -88,6 +88,17 @@ namespace :deploy do
     end
   end
 
+  desc "reload the database with seed data"
+  task :seed do
+    on primary :db do
+      within current_path do
+        with rails_env: fetch(:stage) do
+          execute :rake, 'db:seed'
+        end
+      end
+    end
+  end
+
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
