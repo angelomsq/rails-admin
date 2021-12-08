@@ -27,6 +27,11 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
+# Rbenv specific settings
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, File.read('.ruby-version').strip
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+
 ## Defaults:
 # set :scm,           :git
 set :branch,        :main
@@ -45,12 +50,6 @@ namespace :puma do
     on roles(:app) do
       execute "mkdir #{shared_path}/tmp/sockets -p"
       execute "mkdir #{shared_path}/tmp/pids -p"
-    end
-  end
-
-  task :start do
-    on roles(:app) do
-      invoke! 'puma:restart'
     end
   end
 
@@ -82,7 +81,8 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      invoke 'puma:restart'
+      # invoke 'puma:restart'
+      execute "#{fetch(:rbenv_prefix)} pumactl -P /home/#{fetch(:user)}/#{fetch(:application)}/current/tmp/pids/puma.pid phased-restart"
     end
   end
 
